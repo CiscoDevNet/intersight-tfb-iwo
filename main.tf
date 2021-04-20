@@ -22,10 +22,10 @@ variable "passwd" {
 resource helm_release nginx_ingress {
   name       = "iwok8scollector"
 
-  repository = "https://falkor.tesseractinternal.com/platform-ui"
+  repository = "https://falkor.tesseractinternal.com"
   repository_username = var.uname 
   repository_password = var.passwd 
-  chart      = "intersight/iwok8scollector"
+  chart      = "platform-ui/intersight/iwok8scollector"
 
   set {
     name  = "service.type"
